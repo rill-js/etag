@@ -43,7 +43,7 @@ function getResponseEntity (ctx, options) {
     return fs.stat(body.path).catch(noop)
   } else if ((typeof body === 'string') || Buffer.isBuffer(body)) {
     return body
-  } else {
+  } else if (typeof body === 'object') {
     // Cast body to json and set content type to avoid stringify twice.
     ctx.res.body = JSON.stringify(body)
     ctx.res.set('Content-Type', 'application/json; charset=UTF-8')
