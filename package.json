@@ -22,8 +22,9 @@
   ],
   "homepage": "https://github.com/rill-js/etag",
   "keywords": [
-    "etag",
     "conditional-get",
+    "etag",
+    "fresh",
     "isomorphic",
     "middleware",
     "rill",

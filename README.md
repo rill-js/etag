@@ -42,11 +42,11 @@ npm install @rill/etag
 ```js
 const rill = require('rill')
 const app = rill()
-const conditional = require('@rill/conditional-get')
+const fresh = require('@rill/fresh')
 const etag = require('@rill/etag')
 
-// ETag works together with conditional-get
-app.use(conditional())
+// ETag works together with fresh
+app.use(fresh())
 app.use(etag())
 
 // Response will be sent with ETag header.
