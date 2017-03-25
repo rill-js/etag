@@ -1,7 +1,7 @@
 'use strict'
 
 var calculate = require('etag')
-var Stream = require('stream')
+var isStream = require('is-typeof').stream
 var fs = require('mz/fs')
 function noop () {}
 
@@ -38,7 +38,7 @@ function getResponseEntity (ctx, options) {
   if (status !== 404 && status / 100 | 0 !== 2) return
 
   // Check content type.
-  if (body instanceof Stream) {
+  if (isStream(body)) {
     if (!body.path) return
     return fs.stat(body.path).catch(noop)
   } else if ((typeof body === 'string') || Buffer.isBuffer(body)) {

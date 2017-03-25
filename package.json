@@ -6,15 +6,16 @@
   "browser": "client/index.js",
   "bugs": "https://github.com/rill-js/etag/issues",
   "dependencies": {
-    "etag": "^1.7.0",
-    "mz": "^2.4.0"
+    "etag": "^1.8.0",
+    "is-typeof": "^1.0.2",
+    "mz": "^2.6.0"
   },
   "devDependencies": {
-    "mocha": "^3.1.0",
-    "rill": "^2.3.2",
-    "snazzy": "^5.0.0",
-    "standard": "^8.3.0",
-    "supertest": "^2.0.0"
+    "mocha": "^3.2.0",
+    "rill": "^4.3.1",
+    "snazzy": "^6.0.0",
+    "standard": "^9.0.2",
+    "supertest": "^3.0.0"
   },
   "files": [
     "client/index.js",
