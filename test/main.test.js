@@ -70,7 +70,7 @@ describe('etag()', function () {
 
       app.use(function (ctx, next) {
         return next().then(function () {
-          ctx.res.body = new Buffer('Hello World')
+          ctx.res.body = Buffer.from('Hello World')
         })
       })
 
